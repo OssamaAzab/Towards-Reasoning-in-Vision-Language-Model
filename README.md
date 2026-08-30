@@ -1,6 +1,6 @@
 # Frozen-Encoder VLM Reasoning
 
-[![Verify reproducibility release](https://github.com/OssamaAzab/vlm-reasoning-reproducibility/actions/workflows/ci.yml/badge.svg)](https://github.com/OssamaAzab/vlm-reasoning-reproducibility/actions/workflows/ci.yml)
+[![Verify reproducibility release](https://github.com/OssamaAzab/Towards-Reasoning-in-Vision-Language-Model/actions/workflows/ci.yml/badge.svg)](https://github.com/OssamaAzab/Towards-Reasoning-in-Vision-Language-Model/actions/workflows/ci.yml)
 
 Reproducibility code for a vision-language model in which a frozen vision
 encoder is connected to a frozen Qwen2 language model through a trainable bridge.
@@ -269,8 +269,8 @@ Prerequisites: Linux, Python 3.12, and an NVIDIA GPU for model execution.
 CPU-only commands such as tests and catalogue inspection do not require a GPU.
 
 ```bash
-git clone https://github.com/OssamaAzab/vlm-reasoning-reproducibility.git
-cd vlm-reasoning-reproducibility
+git clone https://github.com/OssamaAzab/Towards-Reasoning-in-Vision-Language-Model.git
+cd Towards-Reasoning-in-Vision-Language-Model
 
 python3.12 -m venv .venv
 source env.sh

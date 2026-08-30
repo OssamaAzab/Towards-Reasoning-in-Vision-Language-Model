@@ -7,7 +7,7 @@ authors:
     given-names: Ossama
 version: 1.0.0
 date-released: 2026-08-28
-repository-code: "https://github.com/OssamaAzab/vlm-reasoning-reproducibility"
+repository-code: "https://github.com/OssamaAzab/Towards-Reasoning-in-Vision-Language-Model"
 license: MIT
 keywords:
   - vision-language models

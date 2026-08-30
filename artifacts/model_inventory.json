@@ -1,0 +1,62 @@
+{
+  "format": "vlm-model-inventory/1.0.0",
+  "language_model": {
+    "model_id": "Qwen/Qwen2-7B-Instruct",
+    "revision": "f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+    "hidden_size": 3584,
+    "frozen": true,
+    "corrected_precision": "bf16"
+  },
+  "encoders": {
+    "clip": {
+      "model_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "pretraining": "contrastive image-text",
+      "feature_shape": [257, 1024],
+      "has_cls_token": true,
+      "frozen": true
+    },
+    "dinov2": {
+      "model_id": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "pretraining": "self-distillation without language",
+      "feature_shape": [257, 1024],
+      "has_cls_token": true,
+      "frozen": true
+    },
+    "ijepa": {
+      "model_id": "facebook/ijepa_vith14_1k",
+      "revision": "f157467ea509bc356ff9f61fd3c0d840eec5e04e",
+      "pretraining": "joint-embedding prediction without language",
+      "feature_shape": [256, 1280],
+      "has_cls_token": false,
+      "frozen": true
+    }
+  },
+  "connectors": {
+    "qformer32": {
+      "output_tokens": 32,
+      "trainable_parameters": {
+        "clip": 60280064,
+        "dinov2": 60280064,
+        "ijepa": 60476672
+      }
+    },
+    "mlp256": {
+      "output_tokens": 256,
+      "trainable_parameters": {
+        "clip": 61815808,
+        "dinov2": 61815808,
+        "ijepa": 60229784
+      }
+    },
+    "pool32": {
+      "output_tokens": 32,
+      "trainable_parameters": {
+        "clip": 61815808,
+        "dinov2": 61815808,
+        "ijepa": 60229784
+      }
+    }
+  }
+}

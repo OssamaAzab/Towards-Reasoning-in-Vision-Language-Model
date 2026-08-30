@@ -1,0 +1,45 @@
+{
+ "slice": "testdev_12578_qids.json",
+ "purpose": "external benchmark endpoint \u2014 official GQA balanced Test-Dev, evaluated whole",
+ "selection": "NONE \u2014 the full published split is used; no sampling, no seed, no exclusion",
+ "n": 12578,
+ "unique_images": 398,
+ "builder": "scripts/70_build_testdev_slice.py",
+ "source": "data/gqa/questions/testdev_balanced_questions.json",
+ "source_sha256": "14039069c0b3c797c7aa9bcd5f4c2aa4b5976e02c0b6773e1a584d942a03a318",
+ "evidence_layer": "corrected_chatml_v1_eos",
+ "scored_by": "src/eval/metrics.py exact_full + the official GQA eval.py (scripts/vendor/gqa_eval.py)",
+ "disjoint_from": {
+  "data/gqa/eval_2000_qids.json": {
+   "shared_qids": 0,
+   "shared_images": 0
+  },
+  "data/gqa/tune_500_qids.json": {
+   "shared_qids": 0,
+   "shared_images": 0
+  },
+  "data/gqa/confirm_3000_qids.json": {
+   "shared_qids": 0,
+   "shared_images": 0
+  },
+  "data/gqa/objective_4000_qids.json": {
+   "shared_qids": 0,
+   "shared_images": 0
+  }
+ },
+ "category_mix": {
+  "other": 5074,
+  "relate": 4662,
+  "choose": 1129,
+  "exist": 1124,
+  "compare": 589
+ },
+ "answer_type_mix_gqa_official": {
+  "binary": 5773,
+  "open": 6805
+ },
+ "gold_answers_public": true,
+ "scene_graphs_available": false,
+ "scene_graph_note": "GQA ships no scene graphs for Test-Dev images, so oracle-graph and oracle-crop arms are impossible here; the official eval.py sets scenes/choices to None for this tier for the same reason.",
+ "sha256": "6344c4cd1e3f3e952be156fd52381a043d8595ce111d1da3ceffaa58cbc45cb6"
+}

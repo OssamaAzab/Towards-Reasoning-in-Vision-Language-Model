@@ -1,0 +1,23 @@
+{
+  "format": "controlled-efficiency-benchmark/1.0.0",
+  "source_artifact_sha256": "3aed3f50c3509dc57ec39d1edc62b6ab72d0bde0b7e10f06f3e0a3d422a9a82f",
+  "timing_method": "CUDA synchronized before and after each stage; medians over three repetitions",
+  "hardware": "NVIDIA RTX PRO 6000 Blackwell",
+  "precision": "bf16",
+  "decoding": "greedy",
+  "batch_size": 1,
+  "warmup_examples": 15,
+  "measured_examples_per_configuration": 600,
+  "flops": "not measured",
+  "configurations": [
+    {"configuration":"clip:mlp256","status":"measured","visual_tokens":256,"prefill_sequence":299,"vision_ms":8.45,"connector_ms":0.70,"prefill_ms":21.37,"decode_ms":12.75,"model_inference_ms":43.29,"peak_allocated_gib":15.79,"peak_reserved_gib":16.46},
+    {"configuration":"clip:qformer32","status":"measured","visual_tokens":32,"prefill_sequence":75,"vision_ms":8.37,"connector_ms":1.28,"prefill_ms":14.55,"decode_ms":12.58,"model_inference_ms":36.80,"peak_allocated_gib":15.67,"peak_reserved_gib":16.55},
+    {"configuration":"clip:pool32","status":"measured","visual_tokens":32,"prefill_sequence":75,"vision_ms":8.45,"connector_ms":0.33,"prefill_ms":14.52,"decode_ms":12.58,"model_inference_ms":35.89,"peak_allocated_gib":15.67,"peak_reserved_gib":16.43},
+    {"configuration":"dinov2:mlp256","status":"measured","visual_tokens":256,"prefill_sequence":299,"vision_ms":8.49,"connector_ms":0.70,"prefill_ms":21.38,"decode_ms":12.76,"model_inference_ms":43.33,"peak_allocated_gib":15.80,"peak_reserved_gib":16.46},
+    {"configuration":"dinov2:qformer32","status":"measured","visual_tokens":32,"prefill_sequence":75,"vision_ms":8.43,"connector_ms":1.28,"prefill_ms":14.53,"decode_ms":12.57,"model_inference_ms":36.83,"peak_allocated_gib":15.67,"peak_reserved_gib":16.57},
+    {"configuration":"dinov2:pool32","status":"not constructed"},
+    {"configuration":"ijepa:mlp256","status":"measured","visual_tokens":256,"prefill_sequence":299,"vision_ms":15.62,"connector_ms":0.76,"prefill_ms":21.36,"decode_ms":12.76,"model_inference_ms":50.50,"peak_allocated_gib":17.07,"peak_reserved_gib":17.77},
+    {"configuration":"ijepa:qformer32","status":"measured","visual_tokens":32,"prefill_sequence":75,"vision_ms":15.61,"connector_ms":1.27,"prefill_ms":14.52,"decode_ms":12.57,"model_inference_ms":43.98,"peak_allocated_gib":16.95,"peak_reserved_gib":17.89},
+    {"configuration":"ijepa:pool32","status":"measured","visual_tokens":32,"prefill_sequence":75,"vision_ms":15.62,"connector_ms":0.36,"prefill_ms":14.53,"decode_ms":12.57,"model_inference_ms":43.11,"peak_allocated_gib":16.94,"peak_reserved_gib":17.74}
+  ]
+}

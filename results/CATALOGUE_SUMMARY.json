@@ -1,0 +1,30 @@
+{
+  "format": "vlm-results-catalogue/1.0.0",
+  "files": {
+    "results_all_index.csv": {
+      "rows": 515,
+      "columns": 43,
+      "sha256": "27853793688cee43b33ae3872242d002083bb4034d1f2b08ef6c058c503b471f"
+    },
+    "results_confidence_intervals.csv": {
+      "rows": 228,
+      "columns": 16,
+      "sha256": "103cd21f116c2537bbcb96f20f2f51a46081e377446e8afe270a97eff3201897"
+    },
+    "results_corrected_eos.csv": {
+      "rows": 351,
+      "columns": 43,
+      "sha256": "c3358dc56a306fa629d433947deb63843e8d8b134aafdd107c1eeefbbb639322"
+    },
+    "results_legacy.csv": {
+      "rows": 164,
+      "columns": 43,
+      "sha256": "1a1f12f85c7038407538779f87a6eac131c2852baace69a2afb45443dafc16ea"
+    },
+    "results_per_category.csv": {
+      "rows": 2410,
+      "columns": 14,
+      "sha256": "dfca2a5e10c63279a8489152c4e96a67b0b5083beffdca18033f25c93f03ffe7"
+    }
+  }
+}

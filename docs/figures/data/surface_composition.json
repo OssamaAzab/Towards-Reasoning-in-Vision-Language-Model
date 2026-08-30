@@ -1,0 +1,58 @@
+{
+  "format": "vlm-figure-values/1.0.0",
+  "figure": "surface_composition.png",
+  "categories": [
+    "relate",
+    "compare",
+    "count",
+    "exist",
+    "choose",
+    "other"
+  ],
+  "category_rule": "src.data.gqa.category_of (PREPROCESSING.md section 4)",
+  "surfaces": [
+    {
+      "key": "tune_500_qids",
+      "label": "Tune-500 (development)",
+      "n": 500,
+      "counts": {
+        "relate": 175,
+        "compare": 18,
+        "count": 0,
+        "exist": 98,
+        "choose": 52,
+        "other": 157
+      },
+      "source": "results/results_per_category.csv#split=tune_500_qids,n"
+    },
+    {
+      "key": "confirm_3000_qids",
+      "label": "Confirm-3000 (confirmatory)",
+      "n": 3000,
+      "counts": {
+        "relate": 1049,
+        "compare": 96,
+        "count": 0,
+        "exist": 532,
+        "choose": 368,
+        "other": 955
+      },
+      "source": "results/results_per_category.csv#split=confirm_3000_qids,n"
+    },
+    {
+      "key": "testdev_12578_qids",
+      "label": "Test-Dev (12,578)",
+      "n": 12578,
+      "counts": {
+        "relate": 4662,
+        "compare": 589,
+        "count": 0,
+        "exist": 1124,
+        "choose": 1129,
+        "other": 5074
+      },
+      "source": "data/gqa/testdev_12578_qids_MANIFEST.json#category_mix"
+    }
+  ],
+  "note": "count is zero on every surface; no counting claim is made"
+}

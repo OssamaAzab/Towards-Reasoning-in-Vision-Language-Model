@@ -1,0 +1,82 @@
+{
+  "format": "vlm-figure-values/1.0.0",
+  "figure": "confirmatory_results.png",
+  "surface": "confirm_3000_qids",
+  "metric": "exact_full",
+  "evidence_layer": "corrected_chatml_v1_eos",
+  "n_questions": 3000,
+  "seed": 42,
+  "epoch": 5,
+  "floor": {
+    "label": "text-only floor",
+    "value": 28.7,
+    "source": "results/results_corrected_eos.csv#comparator_score (comparator_arm = text-only floor)"
+  },
+  "cells": [
+    {
+      "encoder": "clip",
+      "connector": "mlp256",
+      "value": 51.333333,
+      "result_id": "corrected_confirm3000:bridge_clip_w1_bf16_v1_ep5::bridge_clip_w1_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "clip",
+      "connector": "pool32",
+      "value": 44.3,
+      "result_id": "corrected_confirm3000:bridge_clip_w1pool_bf16_v1_ep5::bridge_clip_w1pool_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "clip",
+      "connector": "qformer32",
+      "value": 44.466667,
+      "result_id": "corrected_confirm3000:bridge_clip_w1qf_bf16_v1_ep5::bridge_clip_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "dinov2",
+      "connector": "mlp256",
+      "value": 49.933333,
+      "result_id": "corrected_confirm3000:bridge_dinov2_w1_bf16_v1_ep5::bridge_dinov2_w1_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "dinov2",
+      "connector": "qformer32",
+      "value": 43.833333,
+      "result_id": "corrected_confirm3000:bridge_dinov2_w1qf_bf16_v1_ep5::bridge_dinov2_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "ijepa",
+      "connector": "mlp256",
+      "value": 45.366667,
+      "result_id": "corrected_confirm3000:bridge_ijepa_w1_bf16_v1_ep5::bridge_ijepa_w1_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "ijepa",
+      "connector": "pool32",
+      "value": 41.8,
+      "result_id": "corrected_confirm3000:bridge_ijepa_w1pool_bf16_v1_ep5::bridge_ijepa_w1pool_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    },
+    {
+      "encoder": "ijepa",
+      "connector": "qformer32",
+      "value": 41.366667,
+      "result_id": "corrected_confirm3000:bridge_ijepa_w1qf_bf16_v1_ep5::bridge_ijepa_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__confirm_3000_qids__image_only__direct::exact_full",
+      "source": "results/results_corrected_eos.csv#result_id"
+    }
+  ],
+  "unavailable": [
+    {
+      "encoder": "dinov2",
+      "connector": "pool32",
+      "status": "not trained"
+    }
+  ],
+  "uncertainty": "point estimates; the catalogue stores no interval for individual confirmatory cells",
+  "ci_lock_status": "not applicable"
+}

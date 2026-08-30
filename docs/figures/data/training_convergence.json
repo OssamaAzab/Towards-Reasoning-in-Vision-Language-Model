@@ -1,0 +1,33 @@
+{
+  "format": "corrected-training-curve/1.0.0",
+  "surface": "tune_500_qids",
+  "metric": "exact_full",
+  "protocol": "corrected_chatml_v1_eos",
+  "connector": "mlp256",
+  "seed": 42,
+  "source_pattern": "outputs/eval/tuning/bridge_<encoder>_w1_bf16_v1_ep<N>__corrected_chatml_v1_eos__tune_500_qids__image_only__direct_records.json",
+  "selection_note": "development-surface trajectory; final reported endpoint remains epoch 5 for every encoder",
+  "encoders": {
+    "clip": [
+      {"epoch": 1, "accuracy": 44.6, "source_sha256": "f3751004b72fb782ac96a7dda21e9a5409642d5086d5a82326591b7c24082013"},
+      {"epoch": 2, "accuracy": 50.0, "source_sha256": "1dfe78068594e1b535b26a83803225ed57c5f6f9d13b2dd5f749f62d91c9c798"},
+      {"epoch": 3, "accuracy": 50.4, "source_sha256": "108f1f57cdad3af57050e1ff56a416fb314d51b4bc1ae181c678bc4788df59ff"},
+      {"epoch": 4, "accuracy": 52.8, "source_sha256": "a0f1bd608288ef5fe69c67442e51f89f7b40c7a45469b8b9d1deaf3d450dee27"},
+      {"epoch": 5, "accuracy": 51.0, "source_sha256": "376cfbe579257cc7cf4380bb01011797357efcffe5ca7a1c305fbc92b6331685"}
+    ],
+    "dinov2": [
+      {"epoch": 1, "accuracy": 43.4, "source_sha256": "4394bba611db212a5e6f2e821b040e4d882c5723309925bf662c852a48a582cb"},
+      {"epoch": 2, "accuracy": 47.6, "source_sha256": "1ee85f2ae3059597748f239628537331665574d97a448f784be447cfb5e3306f"},
+      {"epoch": 3, "accuracy": 47.0, "source_sha256": "50ecfaeaa76f57eedc20afe0042ec9550269773bd86c42ebc9daea48c783b599"},
+      {"epoch": 4, "accuracy": 46.4, "source_sha256": "515dd0671846152be831a95dc4977bc1f4f9fd1d73dce12c533fd33a3496bf9e"},
+      {"epoch": 5, "accuracy": 47.2, "source_sha256": "a8aa0ad41b36c56e6b1ae05db9b272618d2b9049b7b981d063021013e12b3fac"}
+    ],
+    "ijepa": [
+      {"epoch": 1, "accuracy": 40.8, "source_sha256": "c53d38498d905db53098d1638815267eb9f31b83d25d2edc3333c53a7abf7cdd"},
+      {"epoch": 2, "accuracy": 43.4, "source_sha256": "8e222ecf11407344f12cec3407ae1cb7e92509b396ebf196a26bc2eae5490ad8"},
+      {"epoch": 3, "accuracy": 45.6, "source_sha256": "6f2719d2e14383550a8d11dcc429b38e698240954bd7d558bc386fa7b42c81bf"},
+      {"epoch": 4, "accuracy": 46.0, "source_sha256": "dc0c49ef087170e74fed623387e6b5f1e740feb1bdf5c07ad56cac392934157a"},
+      {"epoch": 5, "accuracy": 46.2, "source_sha256": "aa4f15b53828003e5b0bf8867d08245d297d9b05312f2574acb0b209a5bb161f"}
+    ]
+  }
+}

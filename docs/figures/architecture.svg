@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Frozen-encoder vision-language model architecture</title>
+  <desc id="desc">An image passes through one of three frozen visual encoders, a trainable bridge, and a frozen Qwen2 language model. A question and optional structural context enter the language-model sequence.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+    <style>
+      .heading { font: 700 22px system-ui, sans-serif; fill: #111827; }
+      .body { font: 16px system-ui, sans-serif; fill: #1f2937; }
+      .small { font: 13px system-ui, sans-serif; fill: #4b5563; }
+      .frozen { fill: #e8f1fb; stroke: #2563a6; stroke-width: 3; }
+      .trained { fill: #fff2c7; stroke: #b77900; stroke-width: 3; }
+      .neutral { fill: #f8fafc; stroke: #64748b; stroke-width: 2.5; }
+      .arrow { stroke: #374151; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="white"/>
+  <text x="600" y="38" text-anchor="middle" class="heading">Frozen encoders, trained bridge, frozen language model</text>
+
+  <rect x="35" y="155" width="110" height="105" rx="14" class="neutral"/>
+  <text x="90" y="215" text-anchor="middle" class="heading">Image</text>
+
+  <rect x="205" y="95" width="270" height="230" rx="16" class="frozen"/>
+  <text x="340" y="132" text-anchor="middle" class="heading">Frozen visual encoder</text>
+  <text x="230" y="177" class="body">CLIP</text>
+  <text x="315" y="177" class="small">257 × 1024 · image-text</text>
+  <text x="230" y="220" class="body">DINOv2</text>
+  <text x="315" y="220" class="small">257 × 1024 · self-distilled</text>
+  <text x="230" y="263" class="body">I-JEPA</text>
+  <text x="315" y="263" class="small">256 × 1280 · predictive</text>
+  <text x="340" y="300" text-anchor="middle" class="small">one encoder selected per experiment</text>
+
+  <rect x="545" y="95" width="250" height="230" rx="16" class="trained"/>
+  <text x="670" y="132" text-anchor="middle" class="heading">Trainable bridge</text>
+  <text x="575" y="179" class="body">Q-Former32</text>
+  <text x="730" y="179" class="small">32 tokens</text>
+  <text x="575" y="222" class="body">MLP256</text>
+  <text x="730" y="222" class="small">256 tokens</text>
+  <text x="575" y="265" class="body">Pool32</text>
+  <text x="730" y="265" class="small">32 tokens</text>
+  <text x="670" y="300" text-anchor="middle" class="small">≈60–62M trained parameters</text>
+
+  <rect x="865" y="125" width="295" height="170" rx="16" class="frozen"/>
+  <text x="1012" y="166" text-anchor="middle" class="heading">Frozen Qwen2-7B</text>
+  <text x="1012" y="205" text-anchor="middle" class="body">Qwen2-7B-Instruct · bf16</text>
+  <text x="1012" y="236" text-anchor="middle" class="small">visual embeddings + question</text>
+  <text x="1012" y="266" text-anchor="middle" class="small">+ optional structural context</text>
+
+  <path d="M 145 207 L 205 207" class="arrow"/>
+  <path d="M 475 207 L 545 207" class="arrow"/>
+  <path d="M 795 207 L 865 207" class="arrow"/>
+  <path d="M 1012 295 L 1012 354" class="arrow"/>
+  <text x="1012" y="389" text-anchor="middle" class="heading">Answer</text>
+
+  <rect x="205" y="357" width="24" height="24" rx="4" class="frozen"/>
+  <text x="240" y="375" class="small">frozen</text>
+  <rect x="325" y="357" width="24" height="24" rx="4" class="trained"/>
+  <text x="360" y="375" class="small">trained (bridge only)</text>
+</svg>

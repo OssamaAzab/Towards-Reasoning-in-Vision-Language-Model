@@ -1,0 +1,71 @@
+{
+  "format": "gqa-testdev-results-provenance/1.0.0",
+  "questions": {
+    "file": "testdev_balanced_questions.json",
+    "sha256": "14039069c0b3c797c7aa9bcd5f4c2aa4b5976e02c0b6773e1a584d942a03a318"
+  },
+  "qids": {
+    "file": "testdev_12578_qids.json",
+    "sha256": "6344c4cd1e3f3e952be156fd52381a043d8595ce111d1da3ceffaa58cbc45cb6"
+  },
+  "cells": {
+    "clip_mlp256": {
+      "label": "CLIP + MLP256",
+      "file": "bridge_clip_w1_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+      "sha256": "a4d8e36e8e0a7367ce764098ca45182b1be594dc92aa11f9dc05877871de4930",
+      "accuracy": 46.342821
+    },
+    "clip_qformer32": {
+      "label": "CLIP + Q-Former32",
+      "file": "bridge_clip_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+      "sha256": "7e9fb9adc25dd115528e6a7e155f8df2f94d18f6d10d71c2e9a39f63a63542c9",
+      "accuracy": 39.354428
+    },
+    "dinov2_mlp256": {
+      "label": "DINOv2 + MLP256",
+      "file": "bridge_dinov2_w1_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+      "sha256": "e6d8fcd28747fb517bc43bcdfe35b9f225b2dc4152c7d7c2b4fa0b8ffe4f0b3d",
+      "accuracy": 44.919701
+    },
+    "dinov2_qformer32": {
+      "label": "DINOv2 + Q-Former32",
+      "file": "bridge_dinov2_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+      "sha256": "0eccd6ea853c88df7c6601a9f3be6e8fa5dd956dfab0b80efb12de957beb47e8",
+      "accuracy": 39.322627
+    },
+    "ijepa_mlp256": {
+      "label": "I-JEPA + MLP256",
+      "file": "bridge_ijepa_w1_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+      "sha256": "55743a0ecb9536d47d9de92369ce7893d19d612ed38f6b2f67f9f6763d7bd9a3",
+      "accuracy": 41.000159
+    },
+    "ijepa_qformer32": {
+      "label": "I-JEPA + Q-Former32",
+      "file": "bridge_ijepa_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+      "sha256": "a22673184f47aa4ad26420c75a2b1af40b5d1cf248b43bcb3d0db58bba49c53b",
+      "accuracy": 37.724599
+    }
+  },
+  "outputs": {
+    "predictions.json": {
+      "sha256": "502fa68267b0c86eee088b5385acbe7ae6c0b0a32099294654cf8c6bc56c489f",
+      "bytes": 8397511
+    },
+    "predictions.csv": {
+      "sha256": "bcc347a4b365cd3a0dc70b0555a2cf564cbef1bc36363949a317d3e694164823",
+      "bytes": 1831603
+    },
+    "category_summary.csv": {
+      "sha256": "2aa58662af55d28e7d841d4865d3bc1dfb0b5abf260d95d5eb578b7e192e7807",
+      "bytes": 521
+    },
+    "testdev_category_distribution.png": {
+      "sha256": "463a604b1f65e4ae682ed84040a5d2fad66444dc78e302e7ed50b1387c26b818",
+      "bytes": 43381
+    },
+    "testdev_category_accuracy.png": {
+      "sha256": "b07cdc01e177a5a97cec07014817020e645c100e37e4f95b72754f729e1cd292",
+      "bytes": 90263
+    }
+  }
+}

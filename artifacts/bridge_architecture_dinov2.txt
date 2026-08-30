@@ -1,0 +1,43 @@
+QFormerBridge — encoder=dinov2 (encoder_dim=1024), llm_dim=3584
+config: num_query_tokens=32 hidden_size=768 layers=6 heads=12
+
+==============================================================================
+FULL MODULE STRUCTURE
+==============================================================================
+QFormerBridge(
+  (encoder_proj): Linear(in_features=1024, out_features=768, bias=True)
+  (encoder_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (decoder): TransformerDecoder(
+    (layers): ModuleList(
+      (0-5): 6 x TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (multihead_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (linear1): Linear(in_features=768, out_features=3072, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=3072, out_features=768, bias=True)
+        (norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (norm3): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+        (dropout3): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (llm_proj): Linear(in_features=768, out_features=3584, bias=True)
+)
+
+==============================================================================
+PER-SUBMODULE PARAMETER BREAKDOWN
+==============================================================================
+encoder_proj          787,200     0.79M  (  1.3%)
+encoder_norm            1,536     0.00M  (  0.0%)
+decoder            56,710,656    56.71M  ( 94.1%)
+llm_proj            2,756,096     2.76M  (  4.6%)
+queries (Param)        24,576     0.02M  (  0.0%)
+------------------------------------------------------------------------------
+TOTAL              60,280,064    60.28M

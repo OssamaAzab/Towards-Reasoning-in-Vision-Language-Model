@@ -1,0 +1,28 @@
+{
+  "format": "vlm-clean-export/1.0.0",
+  "source_commit": "ee2b644",
+  "export_date": "2026-08-28",
+  "history_policy": "fresh history; original repository history excluded",
+  "copy_policy": "explicit allowlist only",
+  "scientific_artifacts": "frozen QID, exclusion, ontology, and result files copied byte-for-byte",
+  "portability_edits": [
+    "repository-relative configuration",
+    "site-neutral single-GPU Slurm templates",
+    "institutional path removal from executable code and comments",
+    "clean-clone skips for separately downloaded data fixtures",
+    "existing leakage exclusion verification without overwrite",
+    "public Test-Dev results packet keyed to upstream questions and images by QID/image ID",
+    "read-only GitHub Actions CPU verification",
+    "exact upstream model revision enforcement",
+    "evidence-backed convergence and controlled efficiency figures",
+    "local-only Test-Dev question/gold/image materializer",
+    "internal review-record markers removed from copied code comments",
+    "frozen-slice construction scripts (confirmatory, objective, graph-mechanism) included",
+    "fresh-history CI guard that survives later release commits",
+    "unified, colour-vision-validated README figure set regenerated from values JSON (replaces a mislabelled first-500 category plot; adds confirmatory-surface, surface-composition and evaluation-surfaces figures)"
+  ],
+  "independent_review": {
+    "date": "2026-08-30",
+    "scope": "second-reader audit of the export: manifest, allowlist, locked hashes, raw-record re-derivation of every README number, test-suite and mutation checks, privacy/secret scan, documentation completeness"
+  }
+}

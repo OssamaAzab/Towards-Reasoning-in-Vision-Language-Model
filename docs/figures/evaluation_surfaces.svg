@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Frozen evaluation surfaces and their roles</title>
+  <desc id="desc">Six frozen GQA question sets. The corrected protocol moves from a 500-question development slice where selection is permitted, to a 3,000-question confirmatory slice with no selection, to the complete 12,578-question Test-Dev split. Three further slices serve the training-objective A/B, a parked graph-mechanism study, and the legacy-layer endpoint. Every slice is image-disjoint from those drawn before it.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#405064"/></marker>
+    <style>
+      .box{rx:14;stroke-width:2.5}.dev{fill:#fff5d9;stroke:#b77900}.conf{fill:#eef4fb;stroke:#2f6fad}.ext{fill:#f4effb;stroke:#7656a8}.aux{fill:#f8fafc;stroke:#64748b;stroke-width:2}
+      .h{font:700 18px system-ui,sans-serif;fill:#16202d}.n{font:700 24px system-ui,sans-serif;fill:#16202d}.b{font:13px system-ui,sans-serif;fill:#425066}.row{font:700 14px system-ui,sans-serif;fill:#425066}.a{stroke:#405064;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="430" fill="white"/>
+  <text x="600" y="34" text-anchor="middle" class="h">Frozen evaluation surfaces (GQA balanced questions; every slice image-disjoint from earlier ones)</text>
+
+  <text x="40" y="78" class="row">Corrected protocol, in order of use</text>
+  <rect x="40" y="90" width="300" height="130" class="box dev"/>
+  <text x="190" y="120" text-anchor="middle" class="h">Tune-500</text>
+  <text x="190" y="150" text-anchor="middle" class="n">500</text>
+  <text x="190" y="178" text-anchor="middle" class="b">development slice</text>
+  <text x="190" y="200" text-anchor="middle" class="b">selection permitted</text>
+
+  <rect x="450" y="90" width="300" height="130" class="box conf"/>
+  <text x="600" y="120" text-anchor="middle" class="h">Confirm-3000</text>
+  <text x="600" y="150" text-anchor="middle" class="n">3,000</text>
+  <text x="600" y="178" text-anchor="middle" class="b">confirmatory surface</text>
+  <text x="600" y="200" text-anchor="middle" class="b">frozen before use · no selection</text>
+
+  <rect x="860" y="90" width="300" height="130" class="box ext"/>
+  <text x="1010" y="120" text-anchor="middle" class="h">Test-Dev</text>
+  <text x="1010" y="150" text-anchor="middle" class="n">12,578</text>
+  <text x="1010" y="178" text-anchor="middle" class="b">official split, complete and sorted</text>
+  <text x="1010" y="200" text-anchor="middle" class="b">398 images · image-clustered intervals</text>
+
+  <path d="M340 155 H450" class="a"/><path d="M750 155 H860" class="a"/>
+
+  <text x="40" y="268" class="row">Purpose-specific slices</text>
+  <rect x="40" y="280" width="300" height="110" class="box aux"/>
+  <text x="190" y="310" text-anchor="middle" class="h">Objective-4000</text>
+  <text x="190" y="340" text-anchor="middle" class="b">4,000 questions</text>
+  <text x="190" y="362" text-anchor="middle" class="b">training-objective A/B endpoint</text>
+
+  <rect x="450" y="280" width="300" height="110" class="box aux"/>
+  <text x="600" y="310" text-anchor="middle" class="h">Graph-3000</text>
+  <text x="600" y="340" text-anchor="middle" class="b">3,000 questions with scene graphs</text>
+  <text x="600" y="362" text-anchor="middle" class="b">frozen and unspent (study parked)</text>
+
+  <rect x="860" y="280" width="300" height="110" class="box aux"/>
+  <text x="1010" y="310" text-anchor="middle" class="h">Locked-2000</text>
+  <text x="1010" y="340" text-anchor="middle" class="b">2,000 questions · 1,725 images</text>
+  <text x="1010" y="362" text-anchor="middle" class="b">legacy-layer endpoint only</text>
+
+  <text x="600" y="416" text-anchor="middle" class="b">Files: data/gqa/*_qids.json with companion *_MANIFEST.json; builders: scripts/17, 29, 40, 70, 76. No surface contains a counting question.</text>
+</svg>

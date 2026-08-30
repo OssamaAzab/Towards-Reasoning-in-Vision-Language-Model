@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Geometry minus baseline",
+    "value": -0.18285896008904434,
+    "ci95": [
+      -0.5394526826521524,
+      0.18406110932279754
+    ],
+    "role": "primary",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.SQSE.PRIMARY_C2_minus_C0"
+  },
+  {
+    "name": "Lexical-only minus baseline",
+    "value": -0.43727142629988874,
+    "ci95": [
+      -0.7741848475506116,
+      -0.08642927638064234
+    ],
+    "role": "secondary",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.SQSE.secondaries.C1_minus_C0"
+  },
+  {
+    "name": "Geometry minus lexical-only",
+    "value": 0.25441246621084435,
+    "ci95": [
+      0.11866317491132361,
+      0.39947952581850454
+    ],
+    "role": "secondary",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.SQSE.secondaries.C2_minus_C1"
+  },
+  {
+    "name": "Geometry minus direction-flipped",
+    "value": 0.5406264906980442,
+    "ci95": [
+      0.35070334422335087,
+      0.7399069313679305
+    ],
+    "role": "secondary",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.SQSE.secondaries.C2_minus_C3"
+  },
+  {
+    "name": "population",
+    "value": "12,578 questions over 398 images",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.SQSE.n"
+  },
+  {
+    "name": "resampling",
+    "value": "paired bootstrap clustered by image, 10,000 resamples",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.SQSE.PRIMARY_C2_minus_C0"
+  }
+]

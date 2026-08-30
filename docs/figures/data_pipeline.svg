@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">Dataset preprocessing and evaluation pipeline</title>
+  <desc id="desc">Official datasets pass through leakage exclusions, frozen feature caching, bridge training, frozen Test-Dev evaluation, official scoring, and public result artifacts.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#405064"/></marker>
+    <style>
+      .box{rx:14;stroke-width:2.5}.data{fill:#eef4fb;stroke:#2f6fad}.gate{fill:#fff5d9;stroke:#b77900}.compute{fill:#edf8ef;stroke:#2d7a46}.result{fill:#f4effb;stroke:#7656a8}
+      .h{font:700 18px system-ui,sans-serif;fill:#16202d}.b{font:13px system-ui,sans-serif;fill:#425066}.a{stroke:#405064;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="330" fill="white"/>
+  <text x="600" y="34" text-anchor="middle" class="h">Reproducible data and evaluation pipeline</text>
+  <rect x="24" y="90" width="170" height="145" class="box data"/>
+  <text x="109" y="123" text-anchor="middle" class="h">Official data</text>
+  <text x="109" y="154" text-anchor="middle" class="b">GQA · VQAv2 · COCO</text><text x="109" y="177" text-anchor="middle" class="b">Visual Genome · LLaVA</text><text x="109" y="208" text-anchor="middle" class="b">original annotations</text>
+  <rect x="226" y="90" width="170" height="145" class="box gate"/>
+  <text x="311" y="123" text-anchor="middle" class="h">Leakage gates</text>
+  <text x="311" y="154" text-anchor="middle" class="b">4,921 COCO IDs</text><text x="311" y="177" text-anchor="middle" class="b">10,234 VG IDs</text><text x="311" y="208" text-anchor="middle" class="b">residual must be zero</text>
+  <rect x="428" y="90" width="170" height="145" class="box compute"/>
+  <text x="513" y="123" text-anchor="middle" class="h">Frozen features</text>
+  <text x="513" y="154" text-anchor="middle" class="b">CLIP · DINOv2 · I-JEPA</text><text x="513" y="177" text-anchor="middle" class="b">RGB processor → fp16</text><text x="513" y="208" text-anchor="middle" class="b">key-count + digest gates</text>
+  <rect x="630" y="90" width="170" height="145" class="box compute"/>
+  <text x="715" y="123" text-anchor="middle" class="h">Bridge training</text>
+  <text x="715" y="154" text-anchor="middle" class="b">70% VQAv2 · 30% LLaVA</text><text x="715" y="177" text-anchor="middle" class="b">canonical-path split</text><text x="715" y="208" text-anchor="middle" class="b">encoder + Qwen frozen</text>
+  <rect x="832" y="90" width="170" height="145" class="box gate"/>
+  <text x="917" y="123" text-anchor="middle" class="h">Test-Dev</text>
+  <text x="917" y="154" text-anchor="middle" class="b">12,578 fixed questions</text><text x="917" y="177" text-anchor="middle" class="b">398 images · 6 cells</text><text x="917" y="208" text-anchor="middle" class="b">exact_full + official scorer</text>
+  <rect x="1034" y="90" width="142" height="145" class="box result"/>
+  <text x="1105" y="123" text-anchor="middle" class="h">Artifacts</text>
+  <text x="1105" y="154" text-anchor="middle" class="b">results CSVs</text><text x="1105" y="177" text-anchor="middle" class="b">CSV/JSON + plots</text><text x="1105" y="208" text-anchor="middle" class="b">SHA-256 provenance</text>
+  <path d="M194 162 H226" class="a"/><path d="M396 162 H428" class="a"/><path d="M598 162 H630" class="a"/><path d="M800 162 H832" class="a"/><path d="M1002 162 H1034" class="a"/>
+  <text x="600" y="286" text-anchor="middle" class="b">Frozen QID lists and category mapping are shared across evaluation, plots, and the all-example results packet.</text>
+</svg>

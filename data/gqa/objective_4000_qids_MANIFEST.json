@@ -1,0 +1,27 @@
+{
+  "slice": "objective_4000_qids.json",
+  "purpose": "held-out endpoint for the training-objective A/B (token vs sequence normalised loss); spent for selection once scored",
+  "n": 4000,
+  "seed": 20260803,
+  "builder": "scripts/40_build_objective_slice.py",
+  "sampler": "scripts/29_build_confirmatory_slice.py:sample_one_per_image",
+  "source": "/scratch/p2602/data/gqa/questions/val_balanced_questions.json",
+  "excluded_slices": {
+    "data/gqa/eval_2000_qids.json": 2000,
+    "data/gqa/tune_500_qids.json": 500,
+    "data/gqa/confirm_3000_qids.json": 3000
+  },
+  "excluded_qids": 5500,
+  "excluded_images": 5206,
+  "candidate_pool_questions": 50375,
+  "candidate_pool_images": 5028,
+  "unique_images": 4000,
+  "category_mix": {
+    "relate": 1342,
+    "other": 1314,
+    "exist": 726,
+    "choose": 489,
+    "compare": 129
+  },
+  "sha256": "dbc0e49061092c1d738df942d8fcb25440568dfe5b2672104a7c9b6035081d46"
+}

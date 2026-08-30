@@ -1,0 +1,35 @@
+{
+  "slice": "tune_500_reltr_clean",
+  "derivation": "tune_500_qids.json minus every question whose image is an exact Open Images VRD-train match or is unresolvable on the Flickr join",
+  "status": "PRE-REGISTERED \u2014 derived from the audit before any accuracy existed",
+  "parent_slice": "data/gqa/tune_500_qids.json",
+  "parent_sha256": "6ddd9ca773a7ffdf09734a396dcf5436adb43cd0199e54833da6f3aa54e58a8e",
+  "audit": "outputs/reltr_sgg/overlap_audit.json",
+  "audit_sha256": "916c7ea8c30e1d5516d1658244300b1eb59e4b2fee4ecf70a2855b4ad4545f61",
+  "excluded_images": {
+    "exact_matches": [
+      "2317321",
+      "2318041",
+      "2334361",
+      "2369265",
+      "2398401",
+      "2404639"
+    ],
+    "unresolved": [
+      "1430",
+      "2272",
+      "2777",
+      "2861",
+      "2986",
+      "3860",
+      "393",
+      "45",
+      "4609"
+    ]
+  },
+  "excluded_question_count": 15,
+  "n_questions": 485,
+  "n_images": 466,
+  "residual_leakage": 0,
+  "note": "a strict subset of the tuning 500, which is the development surface; this is NOT a new endpoint and creates no new selection budget"
+}

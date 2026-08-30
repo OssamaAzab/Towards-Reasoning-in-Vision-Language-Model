@@ -1,0 +1,196 @@
+[
+  {
+    "name": "testdev_full_string_exact_match_CLIP_MLP256",
+    "value": 46.3428,
+    "ci95": [
+      44.9954285774,
+      47.6432997435
+    ],
+    "resampling_unit": "image",
+    "resamples": 10000,
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.cells",
+    "ci_source": "outputs/eval/testdev/bridge_clip_w1_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+    "ci_method": "recomputed, image-clustered paired bootstrap, 398 clusters, 10,000 resamples, not lock-registered",
+    "ci_lock_status": "not lock-registered"
+  },
+  {
+    "name": "testdev_full_string_exact_match_CLIP_QFormer32",
+    "value": 39.3544,
+    "ci95": [
+      38.1826526667,
+      40.5557795204
+    ],
+    "resampling_unit": "image",
+    "resamples": 10000,
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.cells",
+    "ci_source": "outputs/eval/testdev/bridge_clip_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+    "ci_method": "recomputed, image-clustered paired bootstrap, 398 clusters, 10,000 resamples, not lock-registered",
+    "ci_lock_status": "not lock-registered"
+  },
+  {
+    "name": "testdev_full_string_exact_match_DINOv2_MLP256",
+    "value": 44.9197,
+    "ci95": [
+      43.6594898985,
+      46.1605612795
+    ],
+    "resampling_unit": "image",
+    "resamples": 10000,
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.cells",
+    "ci_source": "outputs/eval/testdev/bridge_dinov2_w1_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+    "ci_method": "recomputed, image-clustered paired bootstrap, 398 clusters, 10,000 resamples, not lock-registered",
+    "ci_lock_status": "not lock-registered"
+  },
+  {
+    "name": "testdev_full_string_exact_match_DINOv2_QFormer32",
+    "value": 39.3226,
+    "ci95": [
+      38.1211416705,
+      40.5153604037
+    ],
+    "resampling_unit": "image",
+    "resamples": 10000,
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.cells",
+    "ci_source": "outputs/eval/testdev/bridge_dinov2_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+    "ci_method": "recomputed, image-clustered paired bootstrap, 398 clusters, 10,000 resamples, not lock-registered",
+    "ci_lock_status": "not lock-registered"
+  },
+  {
+    "name": "testdev_full_string_exact_match_I-JEPA_MLP256",
+    "value": 41.0002,
+    "ci95": [
+      39.7943418425,
+      42.2181965827
+    ],
+    "resampling_unit": "image",
+    "resamples": 10000,
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.cells",
+    "ci_source": "outputs/eval/testdev/bridge_ijepa_w1_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+    "ci_method": "recomputed, image-clustered paired bootstrap, 398 clusters, 10,000 resamples, not lock-registered",
+    "ci_lock_status": "not lock-registered"
+  },
+  {
+    "name": "testdev_full_string_exact_match_I-JEPA_QFormer32",
+    "value": 37.7246,
+    "ci95": [
+      36.4964002888,
+      38.9903095779
+    ],
+    "resampling_unit": "image",
+    "resamples": 10000,
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.cells",
+    "ci_source": "outputs/eval/testdev/bridge_ijepa_w1qf_bf16_v1_ep5__corrected_chatml_v1_eos__testdev_12578_qids__image_only__direct_records.json",
+    "ci_method": "recomputed, image-clustered paired bootstrap, 398 clusters, 10,000 resamples, not lock-registered",
+    "ci_lock_status": "not lock-registered"
+  },
+  {
+    "name": "testdev_contrast_MLP256_CLIP minus DINOv2",
+    "value": 1.4231,
+    "ci95": [
+      0.4656,
+      2.3632
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.mlp256.clip_minus_dinov2"
+  },
+  {
+    "name": "testdev_contrast_MLP256_CLIP minus I-JEPA",
+    "value": 5.3427,
+    "ci95": [
+      4.2641,
+      6.3718
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.mlp256.clip_minus_ijepa"
+  },
+  {
+    "name": "testdev_contrast_MLP256_DINOv2 minus I-JEPA",
+    "value": 3.9195,
+    "ci95": [
+      2.9166,
+      4.9287
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.mlp256.dinov2_minus_ijepa"
+  },
+  {
+    "name": "testdev_contrast_Q-Former32_CLIP minus DINOv2",
+    "value": 0.0318,
+    "ci95": [
+      -0.8307,
+      0.8798
+    ],
+    "role": "Descriptive",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.qformer32.clip_minus_dinov2"
+  },
+  {
+    "name": "testdev_contrast_Q-Former32_CLIP minus I-JEPA",
+    "value": 1.6298,
+    "ci95": [
+      0.7016,
+      2.5453
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.qformer32.clip_minus_ijepa"
+  },
+  {
+    "name": "testdev_contrast_Q-Former32_DINOv2 minus I-JEPA",
+    "value": 1.598,
+    "ci95": [
+      0.7086,
+      2.4861
+    ],
+    "role": "Descriptive",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.qformer32.dinov2_minus_ijepa"
+  },
+  {
+    "name": "testdev_contrast_Connector_CLIP: MLP256 minus Q-Former32",
+    "value": 6.9884,
+    "ci95": [
+      5.8248,
+      8.1377
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.connector_cost.clip"
+  },
+  {
+    "name": "testdev_contrast_Connector_DINOv2: MLP256 minus Q-Former32",
+    "value": 5.5971,
+    "ci95": [
+      4.5649,
+      6.6695
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.connector_cost.dinov2"
+  },
+  {
+    "name": "testdev_contrast_Connector_I-JEPA: MLP256 minus Q-Former32",
+    "value": 3.2756,
+    "ci95": [
+      2.283,
+      4.2569
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.connector_cost.ijepa"
+  },
+  {
+    "name": "testdev_contrast_Interaction_(CLIP minus I-JEPA, Q-Former32) minus (CLIP minus I-JEPA, MLP256)",
+    "value": -3.7128,
+    "ci95": [
+      -5.0551,
+      -2.3414
+    ],
+    "role": "Required",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.interaction.clip_minus_ijepa"
+  },
+  {
+    "name": "testdev_population",
+    "value": "12,578 questions over 398 images",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.population"
+  },
+  {
+    "name": "testdev_resampling",
+    "value": "paired bootstrap clustered by image, 10,000 resamples",
+    "source": "FINAL_PROJECT_LOCK/CANONICAL_NUMBERS.json@96027c7#entries.TESTDEV.bootstrap"
+  }
+]

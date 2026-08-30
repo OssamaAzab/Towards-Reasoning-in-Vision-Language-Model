@@ -1,0 +1,47 @@
+name: Verify reproducibility release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPYCACHEPREFIX: /tmp/vlm-release-pycache
+    steps:
+      - name: Check out the fresh release history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements/ci.txt
+
+      - name: Install CPU verification dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements/ci.txt
+          python -m pip check
+
+      - name: Run tests
+        run: python -m pytest -q -p no:cacheprovider
+
+      - name: Compile Python and check shell syntax
+        run: |
+          python -m compileall -q src scripts tests
+          bash -n env.sh cluster/train.sbatch cluster/evaluate.sbatch
+
+      - name: Verify the reviewed release manifest
+        run: sha256sum -c release/RELEASE_MANIFEST.sha256

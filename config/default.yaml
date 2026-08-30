@@ -1,0 +1,81 @@
+seed: 42
+
+paths:
+  root: ${PROJECT_ROOT}
+  data: ${PROJECT_ROOT}/data
+  outputs: ${PROJECT_ROOT}/outputs
+  features: ${PROJECT_ROOT}/outputs/features
+  checkpoints: ${PROJECT_ROOT}/outputs/checkpoints
+  logs: ${PROJECT_ROOT}/outputs/logs
+
+gqa:
+  questions:
+    val_balanced: ${PROJECT_ROOT}/data/gqa/questions/val_balanced_questions.json
+    testdev_balanced: ${PROJECT_ROOT}/data/gqa/questions/testdev_balanced_questions.json
+  image_dirs:
+    - ${PROJECT_ROOT}/data/gqa/images
+  scene_graphs: ${PROJECT_ROOT}/data/gqa/val_sceneGraphs.json
+
+llava:
+  annotations: ${PROJECT_ROOT}/data/llava/llava_instruct_150k.json
+  image_dir:
+    - ${PROJECT_ROOT}/data/coco/train2017
+  exclude_ids: ${PROJECT_ROOT}/data/vqa/gqa_val_coco_exclude.json
+
+vqa:
+  questions: ${PROJECT_ROOT}/data/vqa/v2_OpenEnded_mscoco_train2014_questions.json
+  annotations: ${PROJECT_ROOT}/data/vqa/v2_mscoco_train2014_annotations.json
+  image_dir:
+    - ${PROJECT_ROOT}/data/coco/train2014
+  exclude_ids: ${PROJECT_ROOT}/data/vqa/gqa_val_coco_exclude.json
+
+shared:
+  coco_images: ${PROJECT_ROOT}/data/coco
+  coco_annots: ${PROJECT_ROOT}/data/coco/annotations
+  vg_root: ${PROJECT_ROOT}/data/visual_genome
+
+models:
+  llm: Qwen/Qwen2-7B-Instruct
+  encoders:
+    clip: openai/clip-vit-large-patch14
+    ijepa: facebook/ijepa_vith14_1k
+    dinov2: facebook/dinov2-large
+    ijepa_in22k: facebook/ijepa_vith14_22k
+    vjepa2: facebook/vjepa2-vitl-fpc64-256
+  active_encoder: ijepa
+
+llm:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_compute_dtype: bfloat16
+  bnb_4bit_use_double_quant: true
+  max_new_tokens: 64
+
+bridge:
+  type: qformer
+  num_query_tokens: 32
+  hidden_size: 768
+  num_hidden_layers: 6
+  num_attention_heads: 12
+
+train:
+  short_frac: 0.7
+  val_frac: 0.05
+  batch_size: 8
+  grad_accum_steps: 1
+  lr: 1.0e-4
+  weight_decay: 0.01
+  num_epochs: 3
+  max_answer_tokens: 64
+
+eval:
+  dataset: gqa
+  split: balanced_val
+  categories: [relate, compare, count, exist, choose]
+  max_examples: null
+
+augmentation:
+  enabled: false
+  type: none
+  pred_graphs: ${PROJECT_ROOT}/outputs/pred_graphs/locked2000.json
+  pred_graphs_q: ${PROJECT_ROOT}/outputs/pred_graphs/locked2000_q.json

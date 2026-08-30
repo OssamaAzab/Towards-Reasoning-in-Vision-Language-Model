@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using this metadata."
+title: "Towards Reasoning in Vision-Language Models: Reproducibility Code"
+type: software
+authors:
+  - family-names: Azab
+    given-names: Ossama
+version: 1.0.0
+date-released: 2026-08-28
+repository-code: "https://github.com/OssamaAzab/vlm-reasoning-reproducibility"
+license: MIT
+keywords:
+  - vision-language models
+  - visual question answering
+  - GQA
+  - frozen encoders
+  - CLIP
+  - DINOv2
+  - I-JEPA
+  - reproducibility
